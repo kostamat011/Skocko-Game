@@ -16,13 +16,11 @@ namespace Skocko
         Combination target_comb;
         Combination current_comb;
 
-        Button square, heart, spade, club, smiley, star;
-        Button solution1, solution2, solution3, solution4;
         Button[,] current;
         RoundButton[,] result;
 
-        int curr_pos = 0;
         int curr_row = 0;
+        int curr_pos = 0;
 
         int time = 100;
         int win_cnt = 0, lose_cnt = 0;
@@ -35,65 +33,9 @@ namespace Skocko
             InitGame(); 
         }
 
-        private void AssignButtons()
-        {
-            /*
-            * -assign buttons to button arrays to make easier getting the needed buttons in code
-            */
-            current[0, 0] = button31;
-            current[0, 1] = button32;
-            current[0, 2] = button33;
-            current[0, 3] = button34;
-            current[1, 0] = button38;
-            current[1, 1] = button37;
-            current[1, 2] = button36;
-            current[1, 3] = button35;
-            current[2, 0] = button42;
-            current[2, 1] = button41;
-            current[2, 2] = button40;
-            current[2, 3] = button39;
-            current[3, 0] = button46;
-            current[3, 1] = button45;
-            current[3, 2] = button44;
-            current[3, 3] = button43;
-            current[4, 0] = button50;
-            current[4, 1] = button49;
-            current[4, 2] = button48;
-            current[4, 3] = button47;
-            current[5, 0] = button54;
-            current[5, 1] = button53;
-            current[5, 2] = button52;
-            current[5, 3] = button51;
-            result[0, 0] = roundButton1;
-            result[0, 1] = roundButton2;
-            result[0, 2] = roundButton3;
-            result[0, 3] = roundButton4;
-            result[1, 0] = roundButton8;
-            result[1, 1] = roundButton7;
-            result[1, 2] = roundButton6;
-            result[1, 3] = roundButton5;
-            result[2, 0] = roundButton12;
-            result[2, 1] = roundButton11;
-            result[2, 2] = roundButton10;
-            result[2, 3] = roundButton9;
-            result[3, 0] = roundButton16;
-            result[3, 1] = roundButton15;
-            result[3, 2] = roundButton14;
-            result[3, 3] = roundButton13;
-            result[4, 0] = roundButton20;
-            result[4, 1] = roundButton19;
-            result[4, 2] = roundButton18;
-            result[4, 3] = roundButton17;
-            result[5, 0] = roundButton24;
-            result[5, 1] = roundButton23;
-            result[5, 2] = roundButton22;
-            result[5, 3] = roundButton21;
-        }
-
+        
         private void MainForm_Load(object sender, EventArgs e)
         {
-            current = new Button[25,25];
-            result = new RoundButton[25,25];
             try
             {
                 string past_results;
@@ -134,11 +76,15 @@ namespace Skocko
             target_comb = new Combination(r.Next(0,6), r.Next(0, 6), r.Next(0, 6), r.Next(0, 6));
             current_comb = new Combination(9, 9, 9, 9);
             Timer();
-            btnSolution1.BackgroundImage = btnSolution2.BackgroundImage = btnSolution3.BackgroundImage = btnSolution4.BackgroundImage = null;
         }
 
         public void ShowSolution()
         {
+            /*
+             * -show the target combination in result buttons
+             * 
+             * */
+
             switch (target_comb.order[0])
             {
                 case 0:
@@ -227,11 +173,19 @@ namespace Skocko
 
         public void Check()
         {
+            /*
+             *-compare current combination to target combination
+             *-if they are same player has won the game
+             *
+             */
             
             if (current_comb.order.SequenceEqual(target_comb.order))
             {
-                wonGame();
+                //color all circles red
                 result[curr_row, 0].BackColor = result[curr_row, 1].BackColor = result[curr_row, 2].BackColor = result[curr_row, 3].BackColor = Color.Red;
+
+                //call winner method
+                wonGame();
             }
             else
             {
@@ -301,17 +255,16 @@ namespace Skocko
                 }
             }
             else
+            {
                 MessageBox.Show("Fill all 4 fields in a row");
+            }
         }
-
-
 
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             btnNewGame.Visible = false;
             NewGame();
-
         }
 
         public void lostGame()
@@ -334,16 +287,20 @@ namespace Skocko
 
         public void NewGame()
         {
+            /*
+             *-reset all combination buttons and all result circles
+             *-call InitGame to initialize time and combinations
+             *-update labels
+             */
             for(int i=0;i<6;i++)
             {
                 for(int k=0;k<4;k++)
                 {
                     current[i, k].BackgroundImage = null;
                     result[i, k].BackColor = Color.White;
-                   
-                    
                 }
             }
+            btnSolution1.BackgroundImage = btnSolution2.BackgroundImage = btnSolution3.BackgroundImage = btnSolution4.BackgroundImage = null;
             curr_row = curr_pos = 0;
             InitGame();
             lbSuccess.Text = win_cnt.ToString() + "/" + (win_cnt + lose_cnt).ToString();
@@ -353,14 +310,24 @@ namespace Skocko
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            /*
+             *-decrease time
+             *-update timer text
+             *-check if time ran out
+             */
             time--;
             lbTime.Text = time.ToString();
             if (time == 0)
+            {
                 lostGame();
+            }
         }
 
         private void saveScreenshotToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /**
+             *-save current score 
+             */
             StreamWriter sw = new StreamWriter("rezultat.txt", false);
             sw.WriteLine(lbSuccess.Text);
             sw.Dispose();
@@ -374,6 +341,9 @@ namespace Skocko
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            /*
+             *-delete current sign and update current position 
+             */
             if (curr_pos != 0 && current[curr_row,curr_pos-1].BackgroundImage!=null)
             {
                 current[curr_row, curr_pos - 1].BackgroundImage = null;
@@ -422,8 +392,63 @@ namespace Skocko
             }
         }
 
+        private void AssignButtons()
+        {
+            /*
+            * -assign buttons to button arrays to make easier getting the needed buttons in code
+            */
+            current = new Button[25, 25];
+            result = new RoundButton[25, 25];
+            current[0, 0] = button31;
+            current[0, 1] = button32;
+            current[0, 2] = button33;
+            current[0, 3] = button34;
+            current[1, 0] = button38;
+            current[1, 1] = button37;
+            current[1, 2] = button36;
+            current[1, 3] = button35;
+            current[2, 0] = button42;
+            current[2, 1] = button41;
+            current[2, 2] = button40;
+            current[2, 3] = button39;
+            current[3, 0] = button46;
+            current[3, 1] = button45;
+            current[3, 2] = button44;
+            current[3, 3] = button43;
+            current[4, 0] = button50;
+            current[4, 1] = button49;
+            current[4, 2] = button48;
+            current[4, 3] = button47;
+            current[5, 0] = button54;
+            current[5, 1] = button53;
+            current[5, 2] = button52;
+            current[5, 3] = button51;
+            result[0, 0] = roundButton1;
+            result[0, 1] = roundButton2;
+            result[0, 2] = roundButton3;
+            result[0, 3] = roundButton4;
+            result[1, 0] = roundButton8;
+            result[1, 1] = roundButton7;
+            result[1, 2] = roundButton6;
+            result[1, 3] = roundButton5;
+            result[2, 0] = roundButton12;
+            result[2, 1] = roundButton11;
+            result[2, 2] = roundButton10;
+            result[2, 3] = roundButton9;
+            result[3, 0] = roundButton16;
+            result[3, 1] = roundButton15;
+            result[3, 2] = roundButton14;
+            result[3, 3] = roundButton13;
+            result[4, 0] = roundButton20;
+            result[4, 1] = roundButton19;
+            result[4, 2] = roundButton18;
+            result[4, 3] = roundButton17;
+            result[5, 0] = roundButton24;
+            result[5, 1] = roundButton23;
+            result[5, 2] = roundButton22;
+            result[5, 3] = roundButton21;
+        }
 
-       
         #region event_handleri_znakovi
 
         private void button25_Click(object sender, EventArgs e)

@@ -118,11 +118,11 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 460);
+            this.label1.Location = new System.Drawing.Point(23, 460);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 25);
+            this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Preostalo vreme:";
+            this.label1.Text = "Time left:";
             // 
             // lbTime
             // 
@@ -130,7 +130,7 @@
             this.lbTime.BackColor = System.Drawing.Color.Transparent;
             this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.White;
-            this.lbTime.Location = new System.Drawing.Point(69, 489);
+            this.lbTime.Location = new System.Drawing.Point(48, 489);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(48, 25);
             this.lbTime.TabIndex = 25;
@@ -196,13 +196,13 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(12, 552);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 25);
+            this.label3.Size = new System.Drawing.Size(204, 24);
             this.label3.TabIndex = 56;
-            this.label3.Text = "Tacna kombinacija:";
+            this.label3.Text = "Correct combination:";
             // 
             // btnSolution4
             // 
@@ -730,11 +730,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(224, 460);
+            this.label4.Location = new System.Drawing.Point(211, 460);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 25);
+            this.label4.Size = new System.Drawing.Size(141, 25);
             this.label4.TabIndex = 67;
-            this.label4.Text = "Uspesnost:";
+            this.label4.Text = "Games won:";
             // 
             // lbSuccess
             // 
@@ -754,11 +754,11 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(394, 460);
+            this.label6.Location = new System.Drawing.Point(430, 460);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 25);
+            this.label6.Size = new System.Drawing.Size(86, 25);
             this.label6.TabIndex = 69;
-            this.label6.Text = "Procenat:";
+            this.label6.Text = "Win %:";
             // 
             // lbPct
             // 
@@ -766,7 +766,7 @@
             this.lbPct.BackColor = System.Drawing.Color.Transparent;
             this.lbPct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPct.ForeColor = System.Drawing.Color.White;
-            this.lbPct.Location = new System.Drawing.Point(426, 489);
+            this.lbPct.Location = new System.Drawing.Point(446, 489);
             this.lbPct.Name = "lbPct";
             this.lbPct.Size = new System.Drawing.Size(43, 25);
             this.lbPct.TabIndex = 70;
