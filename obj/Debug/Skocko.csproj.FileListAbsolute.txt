@@ -25,3 +25,17 @@ E:\source\repos\Skocko\WindowsFormsApplication1\WindowsFormsApplication1\obj\Deb
 E:\source\repos\Skocko\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Skocko.exe
 E:\source\repos\Skocko\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Skocko.pdb
 E:\source\repos\Skocko\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Skocko.MainForm.resources
+E:\source\repos\Skocko\SkockoGame\bin\Debug\Skocko.exe.config
+E:\source\repos\Skocko\SkockoGame\bin\Debug\Skocko.exe.manifest
+E:\source\repos\Skocko\SkockoGame\bin\Debug\Skocko.application
+E:\source\repos\Skocko\SkockoGame\bin\Debug\Skocko.exe
+E:\source\repos\Skocko\SkockoGame\bin\Debug\Skocko.pdb
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.csprojAssemblyReference.cache
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.MainForm.resources
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.Properties.Resources.resources
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.csproj.GenerateResource.cache
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.csproj.CoreCompileInputs.cache
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.exe.manifest
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.application
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.exe
+E:\source\repos\Skocko\SkockoGame\obj\Debug\Skocko.pdb
