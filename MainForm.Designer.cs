@@ -375,40 +375,40 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.menuToolStripMenuItem.Text = "Meni";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
             // 
             // saveScreenshotToolStripMenuItem
             // 
             this.saveScreenshotToolStripMenuItem.Name = "saveScreenshotToolStripMenuItem";
-            this.saveScreenshotToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.saveScreenshotToolStripMenuItem.Text = "Snimi Rezultat";
+            this.saveScreenshotToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveScreenshotToolStripMenuItem.Text = "Save Result";
             this.saveScreenshotToolStripMenuItem.Click += new System.EventHandler(this.saveScreenshotToolStripMenuItem_Click);
             // 
             // resetScoreToolStripMenuItem
             // 
             this.resetScoreToolStripMenuItem.Name = "resetScoreToolStripMenuItem";
-            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.resetScoreToolStripMenuItem.Text = "Resetuj rezultat";
+            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resetScoreToolStripMenuItem.Text = "Reset Result";
             this.resetScoreToolStripMenuItem.Click += new System.EventHandler(this.resetScoreToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(151, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.exitToolStripMenuItem.Text = "Izadji";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.settingsToolStripMenuItem.Text = "Opcije";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Options";
             // 
             // button31
             // 
